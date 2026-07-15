@@ -1,1 +1,127 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #030712;
+    color: #f3f4f6;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(circle at 50% 0%, #0b192e 0%, #030712 65%);
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+.profile-card {
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 24px;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    margin-bottom: 45px;
+}
+
+.profile-img-wrapper {
+    position: relative;
+}
+
+.profile-img {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3b82f6; /* ขอบน้ำเงินสว่าง */
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.45); /* รัศมีเรืองแสง */
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.badge {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    color: #ffffff;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.profile-info h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nickname {
+    color: #60a5fa;
+    margin-top: 5px;
+    font-size: 1.1rem;
+}
+
+.main-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 15px;
+    color: #ffffff;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 24px;
+    background: #3b82f6;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #3b82f6;
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.anime-card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card:hover {
+    transform: translateY(-6px);
+    border-color: #3b82f6;
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.2);
+}
+
+.card-img {
+    width: 100%;
+    height: 195px;
