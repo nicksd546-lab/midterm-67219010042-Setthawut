@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #030712; 
+    background-color: #030712; /* พื้นหลังดำมืด */
     color: #e5e7eb; 
     padding: 40px 20px;
     display: flex;
@@ -24,7 +24,7 @@ body {
 }
 
 /* ==========================================
-   2. HEADER / PROFILE SECTION
+   2. HEADER / PROFILE SECTION (ดำ-น้ำเงิน)
    ========================================== */
 .profile-card {
     background: rgba(15, 23, 42, 0.7); 
@@ -174,19 +174,12 @@ body {
 }
 
 /* ==========================================
-   5. SONG LIST SECTION (ตกแต่งตัวครอบ Link)
+   5. SONG LIST SECTION (ดีไซน์ใหม่เป็นแถวแนวนอนพร้อมกล่องวิดีโอ)
    ========================================== */
 .song-list-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-/* ล้างสไตล์เริ่มต้นของแท็กลิงก์ไม่ให้ตัวหนังสือเพี้ยน */
-.song-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
 }
 
 .song-card-item {
@@ -201,16 +194,16 @@ body {
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* เอฟเฟกต์โฮเวอร์การ์ดเพลง */
-.song-card-link:hover .song-card-item {
+.song-card-item:hover {
     transform: translateX(4px);
     border-color: #3b82f6;
     box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
 }
 
+/* กล่องจำลองเครื่องเล่น/หน้าต่างวิดีโอ YouTube */
 .song-video-wrapper {
     width: 240px;
-    height: 135px;
+    height: 135px; /* อัตราส่วน 16:9 แบบวิดีโอทั่วไป */
     background: #030712;
     border-radius: 12px;
     overflow: hidden;
@@ -227,17 +220,18 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.song-card-link:hover .song-video-img {
+.song-card-item:hover .song-video-img {
     opacity: 1;
     transform: scale(1.03);
 }
 
+/* ปุ่ม Play สีแดงสไตล์ YouTube ตรงกลางรูปภาพ */
 .play-btn-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #ef4444; 
+    background: #ef4444; /* แดง YouTube */
     color: #ffffff;
     width: 48px;
     height: 32px;
@@ -246,11 +240,12 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
+    cursor: pointer;
     box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.song-card-link:hover .play-btn-overlay {
+.song-card-item:hover .play-btn-overlay {
     background: #dc2626;
     transform: translate(-50%, -50%) scale(1.1);
 }
@@ -285,7 +280,7 @@ body {
 }
 
 /* ==========================================
-   6. RESPONSIVE DESIGN
+   6. RESPONSIVE DESIGN (สำหรับหน้าจอมือถือ)
    ========================================== */
 @media (max-width: 768px) {
     body {
