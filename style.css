@@ -9,12 +9,11 @@
 }
 
 body {
-    background-color: #030712; /* พื้นหลังดำมืด */
-    color: #e5e7eb; /* ตัวอักษรขาวเทา สบายตา */
+    background-color: #030712; 
+    color: #e5e7eb; 
     padding: 40px 20px;
     display: flex;
     justify-content: center;
-    /* ไล่เฉดสีน้ำเงินเข้มจากด้านบนเพิ่มมิติไซเบอร์ */
     background-image: radial-gradient(circle at 50% 0%, #0b192e 0%, #030712 70%);
     background-attachment: fixed;
 }
@@ -25,11 +24,11 @@ body {
 }
 
 /* ==========================================
-   2. HEADER / PROFILE SECTION (ดำ-น้ำเงิน)
+   2. HEADER / PROFILE SECTION
    ========================================== */
 .profile-card {
-    background: rgba(15, 23, 42, 0.7); /* น้ำเงินเข้มโปร่งแสง */
-    border: 1px solid rgba(59, 130, 246, 0.2); /* ขอบน้ำเงินบางๆ */
+    background: rgba(15, 23, 42, 0.7); 
+    border: 1px solid rgba(59, 130, 246, 0.2); 
     border-radius: 24px;
     padding: 35px;
     display: flex;
@@ -49,7 +48,7 @@ body {
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #3b82f6; /* เส้นขอบรูปสีน้ำเงินสว่าง */
+    border: 3px solid #3b82f6; 
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); 
 }
 
@@ -58,7 +57,7 @@ body {
 }
 
 .badge {
-    background: linear-gradient(135deg, #1d4ed8, #2563eb); /* แบดจ์ไล่เฉดสีน้ำเงิน */
+    background: linear-gradient(135deg, #1d4ed8, #2563eb); 
     color: #ffffff;
     padding: 5px 14px;
     border-radius: 50px;
@@ -76,7 +75,7 @@ body {
 }
 
 .nickname {
-    color: #60a5fa; /* ชื่อเล่นสีน้ำเงินฟ้าสว่าง */
+    color: #60a5fa; 
     margin-top: 4px;
     font-size: 1.1rem;
 }
@@ -96,7 +95,6 @@ body {
     color: #ffffff;
 }
 
-/* เส้นตรงสีน้ำเงินนีออนตั้งฉากหน้านำหัวข้อ */
 .section-title::before {
     content: '';
     position: absolute;
@@ -111,6 +109,208 @@ body {
 }
 
 /* ==========================================
-   4. ANIME GRID SECTION (การ์ดอนิเมะ)
+   4. ANIME GRID SECTION
    ========================================== */
 .anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.anime-card {
+    background: #0f172a; 
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card:hover {
+    transform: translateY(-6px);
+    border-color: #3b82f6;
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
+}
+
+.card-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.anime-card:hover .card-img {
+    transform: scale(1.04);
+}
+
+.card-rank {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(3, 7, 18, 0.85);
+    color: #60a5fa;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    z-index: 2;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #9ca3af;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   5. SONG LIST SECTION (ตกแต่งตัวครอบ Link)
+   ========================================== */
+.song-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ล้างสไตล์เริ่มต้นของแท็กลิงก์ไม่ให้ตัวหนังสือเพี้ยน */
+.song-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.song-card-item {
+    display: flex;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 15px;
+    align-items: center;
+    gap: 25px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* เอฟเฟกต์โฮเวอร์การ์ดเพลง */
+.song-card-link:hover .song-card-item {
+    transform: translateX(4px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+}
+
+.song-video-wrapper {
+    width: 240px;
+    height: 135px;
+    background: #030712;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.song-video-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.song-card-link:hover .song-video-img {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.play-btn-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ef4444; 
+    color: #ffffff;
+    width: 48px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.song-card-link:hover .play-btn-overlay {
+    background: #dc2626;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.song-card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.song-info-top h4 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.song-info-top p {
+    font-size: 1rem;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+.song-item-rank {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #60a5fa;
+    background: rgba(59, 130, 246, 0.15);
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* ==========================================
+   6. RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .song-card-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .song-video-wrapper {
+        width: 100%;
+        height: 180px;
+    }
+
+    .song-card-details {
+        align-items: flex-start;
+    }
+}
