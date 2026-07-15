@@ -9,13 +9,13 @@
 }
 
 body {
-    background-color: #0a0a0a; /* ดำสนิท */
+    background-color: #030712; /* พื้นหลังดำมืด */
     color: #e5e7eb; /* ตัวอักษรขาวเทา สบายตา */
     padding: 40px 20px;
     display: flex;
     justify-content: center;
-    /* ไล่เฉดสีเทามืดด้านบนเพิ่มมิติความพรีเมียม */
-    background-image: radial-gradient(circle at 50% 0%, #1e1e1e 0%, #0a0a0a 70%);
+    /* ไล่เฉดสีน้ำเงินเข้มจากด้านบนเพิ่มมิติไซเบอร์ */
+    background-image: radial-gradient(circle at 50% 0%, #0b192e 0%, #030712 70%);
     background-attachment: fixed;
 }
 
@@ -25,18 +25,18 @@ body {
 }
 
 /* ==========================================
-   2. HEADER / PROFILE SECTION (ธีมดำ-มินิมอล)
+   2. HEADER / PROFILE SECTION (ดำ-น้ำเงิน)
    ========================================== */
 .profile-card {
-    background: rgba(23, 23, 23, 0.75); /* สีเทาเข้มโปร่งแสง */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* ขอบสีขาวจางๆ */
+    background: rgba(15, 23, 42, 0.7); /* น้ำเงินเข้มโปร่งแสง */
+    border: 1px solid rgba(59, 130, 246, 0.2); /* ขอบน้ำเงินบางๆ */
     border-radius: 24px;
     padding: 35px;
     display: flex;
     align-items: center;
     gap: 35px;
     backdrop-filter: blur(12px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
     margin-bottom: 45px;
 }
 
@@ -49,8 +49,8 @@ body {
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ffffff; /* เส้นขอบรูปขาวเงา */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15); 
+    border: 3px solid #3b82f6; /* เส้นขอบรูปสีน้ำเงินสว่าง */
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); 
 }
 
 .profile-info {
@@ -58,7 +58,7 @@ body {
 }
 
 .badge {
-    background: linear-gradient(135deg, #262626, #404040); /* ป้าย Badge ชาร์โคล */
+    background: linear-gradient(135deg, #1d4ed8, #2563eb); /* แบดจ์ไล่เฉดสีน้ำเงิน */
     color: #ffffff;
     padding: 5px 14px;
     border-radius: 50px;
@@ -67,7 +67,6 @@ body {
     letter-spacing: 1px;
     display: inline-block;
     margin-bottom: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .profile-info h1 {
@@ -77,7 +76,7 @@ body {
 }
 
 .nickname {
-    color: #a3a3a3; /* สีเทาอ่อน */
+    color: #60a5fa; /* ชื่อเล่นสีน้ำเงินฟ้าสว่าง */
     margin-top: 4px;
     font-size: 1.1rem;
 }
@@ -97,7 +96,7 @@ body {
     color: #ffffff;
 }
 
-/* เส้นตรงสีขาวโมเดิร์นตั้งฉากหน้านำหัวข้อ */
+/* เส้นตรงสีน้ำเงินนีออนตั้งฉากหน้านำหัวข้อ */
 .section-title::before {
     content: '';
     position: absolute;
@@ -106,13 +105,13 @@ body {
     transform: translateY(-50%);
     width: 4px;
     height: 24px;
-    background: #ffffff;
+    background: #3b82f6;
     border-radius: 2px;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 8px #3b82f6;
 }
 
 /* ==========================================
-   4. ANIME GRID SECTION (การ์ดอนิเมะ)
+   4. ANIME GRID SECTION (การ์ดอนิเมะโทนดำน้ำเงิน)
    ========================================== */
 .anime-grid {
     display: grid;
@@ -121,19 +120,19 @@ body {
 }
 
 .anime-card {
-    background: #171717; /* แบ็คกราวด์การ์ดสีถ่าน */
-    border: 1px solid #262626;
+    background: #0f172a; /* พื้นหลังการ์ดสี Dark Navy */
+    border: 1px solid #1e293b;
     border-radius: 16px;
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* เอฟเฟกต์ยกตัวและเปลี่ยนขอบเป็นสีขาวตอนเมาส์ชี้ */
+/* เอฟเฟกต์ยกตัวและเปลี่ยนขอบเป็นสีน้ำเงินเรืองแสงตอนชี้เมาส์ */
 .anime-card:hover {
     transform: translateY(-6px);
-    border-color: #ffffff;
-    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.1);
+    border-color: #3b82f6;
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
 }
 
 .card-img {
@@ -151,13 +150,13 @@ body {
     position: absolute;
     top: 15px;
     left: 15px;
-    background: rgba(10, 10, 10, 0.85);
-    color: #ffffff;
+    background: rgba(3, 7, 18, 0.85);
+    color: #60a5fa;
     padding: 4px 12px;
     border-radius: 8px;
     font-weight: 600;
     font-size: 0.85rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.3);
     z-index: 2;
 }
 
@@ -166,95 +165,4 @@ body {
 }
 
 .card-content h3 {
-    font-size: 1.1rem;
-    color: #ffffff;
-    margin-bottom: 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.card-content p {
-    color: #a3a3a3;
-    font-size: 0.88rem;
-    line-height: 1.5;
-}
-
-/* ==========================================
-   5. SONG LIST SECTION (ลิสต์เพลงสไตล์สตรีมมิ่ง)
-   ========================================== */
-.song-list {
-    background: #171717;
-    border: 1px solid #262626;
-    border-radius: 16px;
-    padding: 10px;
-}
-
-.song-item {
-    display: flex;
-    align-items: center;
-    padding: 16px 20px;
-    border-radius: 12px;
-    transition: background-color 0.2s ease;
-    border-bottom: 1px solid rgba(38, 38, 38, 0.5);
-}
-
-.song-item:last-child {
-    border-bottom: none;
-}
-
-/* ไฮไลต์แถวเพลงสีเทาบางๆ เมื่อเลื่อนเมาส์มาโดน */
-.song-item:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.song-rank {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #404040; /* ตัวเลขสีเทาเข้มตอนปกติ */
-    width: 45px;
-    transition: color 0.2s ease;
-}
-
-.song-item:hover .song-rank {
-    color: #ffffff; /* ตัวเลขสว่างขาวเมื่อโฮเวอร์ */
-}
-
-.song-details h4 {
-    font-size: 1.05rem;
-    color: #ffffff;
-    font-weight: 500;
-}
-
-.song-details p {
-    font-size: 0.88rem;
-    color: #a3a3a3;
-    margin-top: 2px;
-}
-
-/* ==========================================
-   6. FOOTER SECTION (ส่วนท้ายเว็บ)
-   ========================================== */
-.footer-section {
-    text-align: center;
-    padding: 20px;
-    color: #737373;
-    font-size: 0.9rem;
-    margin-top: 20px;
-}
-
-/* ==========================================
-   7. RESPONSIVE DESIGN (สำหรับหน้าจอมือถือ)
-   ========================================== */
-@media (max-width: 768px) {
-    body {
-        padding: 20px 12px;
-    }
-
-    .profile-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-        gap: 20px;
-    }
-}
+    font-size:
