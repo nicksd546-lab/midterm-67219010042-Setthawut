@@ -1,3 +1,6 @@
+/* ==========================================
+   1. RESET & GLOBAL STYLES
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +24,9 @@ body {
     max-width: 1000px;
 }
 
+/* ==========================================
+   2. HEADER / PROFILE SECTION (ธีมดำ-มินิมอล)
+   ========================================== */
 .profile-card {
     background: rgba(23, 23, 23, 0.75); /* สีเทาเข้มโปร่งแสง */
     border: 1px solid rgba(255, 255, 255, 0.1); /* ขอบสีขาวจางๆ */
@@ -76,6 +82,9 @@ body {
     font-size: 1.1rem;
 }
 
+/* ==========================================
+   3. SECTION LAYOUT & TITLES
+   ========================================== */
 .main-section {
     margin-bottom: 50px;
 }
@@ -101,6 +110,10 @@ body {
     border-radius: 2px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
+
+/* ==========================================
+   4. ANIME GRID SECTION (การ์ดอนิเมะ)
+   ========================================== */
 .anime-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -166,6 +179,10 @@ body {
     font-size: 0.88rem;
     line-height: 1.5;
 }
+
+/* ==========================================
+   5. SONG LIST SECTION (ลิสต์เพลงสไตล์สตรีมมิ่ง)
+   ========================================== */
 .song-list {
     background: #171717;
     border: 1px solid #262626;
@@ -214,6 +231,10 @@ body {
     color: #a3a3a3;
     margin-top: 2px;
 }
+
+/* ==========================================
+   6. FOOTER SECTION (ส่วนท้ายเว็บ)
+   ========================================== */
 .footer-section {
     text-align: center;
     padding: 20px;
@@ -221,6 +242,10 @@ body {
     font-size: 0.9rem;
     margin-top: 20px;
 }
+
+/* ==========================================
+   7. RESPONSIVE DESIGN (สำหรับหน้าจอมือถือ)
+   ========================================== */
 @media (max-width: 768px) {
     body {
         padding: 20px 12px;
