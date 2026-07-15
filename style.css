@@ -165,4 +165,84 @@ body {
 }
 
 .card-content h3 {
-    font-size:
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-content p {
+    color: #9ca3af;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   5. SONG LIST SECTION (ลิสต์เพลงสไตล์สตรีมมิ่ง)
+   ========================================== */
+.song-list {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    border-radius: 12px;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid rgba(30, 41, 59, 0.5);
+}
+
+.song-item:last-child {
+    border-bottom: none;
+}
+
+/* ไฮไลต์แถวเพลงสีน้ำเงินจางๆ เมื่อเลื่อนเมาส์มาโดน */
+.song-item:hover {
+    background-color: rgba(59, 130, 246, 0.08);
+}
+
+.song-rank {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e40af; /* ตัวเลขสีน้ำเงินเข้มตอนปกติ */
+    width: 45px;
+    transition: color 0.2s ease;
+}
+
+.song-item:hover .song-rank {
+    color: #3b82f6; /* ตัวเลขสว่างฟ้าเมื่อโฮเวอร์ */
+}
+
+.song-details h4 {
+    font-size: 1.05rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.song-details p {
+    font-size: 0.88rem;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+/* ==========================================
+   6. RESPONSIVE DESIGN (สำหรับหน้าจอมือถือ)
+   ========================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+}
